@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { CartProvider } from "./context/CartContext";
-import { NavBar } from "./components/Navbar";
-import Home from "./pages/Home.tsx";
-import Login from "./pages/Login.tsx";
-import Register from "./pages/Register.tsx";
-import Cart from "./pages/Cart.tsx";
-import History from "./pages/History.tsx";
+import { Navbar } from "./components/Navbar";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Cart from "./pages/Cart";
+import History from "./pages/History";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <AuthProvider>
         <CartProvider>
           <div className="min-h-screen bg-background">
-            <NavBar />
+            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
